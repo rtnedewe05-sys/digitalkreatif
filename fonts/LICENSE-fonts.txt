@@ -1,0 +1,9 @@
+Font Arab yang dipakai untuk pilihan mushaf:
+
+- Amiri Quran (bawaan): SIL Open Font License 1.1.
+- KFGQPC Uthmanic Script HAFS (Mushaf Madinah / internasional): King Fahd Glorious Quran Printing Complex, Madinah.
+  Disalin dari paket npm kfgqpc-uthmanic-script-hafs-regular; dikonversi ke woff2 tanpa mengubah glyph.
+- LPMQ Isep Misbah (Mushaf Standar Indonesia / Kemenag): Lajnah Pentashihan Mushaf Al-Qur'an, Kementerian Agama RI.
+  Disalin dari github.com/kangismet/lpmq-font.
+
+Periksa syarat penggunaan masing-masing penerbit font sebelum aplikasi dipublikasikan.
