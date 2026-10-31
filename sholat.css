@@ -1,0 +1,54 @@
+/* Tuntunan Sholat */
+.sh-wrap{max-width:var(--maxw);margin:0 auto}
+.sh-hero{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;border-radius:18px;padding:18px 18px 16px;margin-bottom:12px;text-align:center}
+[data-theme=dark] .sh-hero{background:linear-gradient(135deg,#134e4a,#0f2a26)}
+.sh-hero h1{margin:6px 0 4px;font-size:1.35rem}.sh-hero p{margin:0;opacity:.92}
+.sh-hero .sh-bis{font-family:'Amiri Quran',serif;font-size:1.35rem;line-height:2;margin:0;opacity:1}
+.sh-tabs{display:flex;flex-wrap:wrap;gap:6px 8px;padding:2px 2px 10px;margin-bottom:4px}
+.sh-tabs::-webkit-scrollbar{display:none}
+.sh-tabs .chip{flex:1 1 auto;text-align:center;text-decoration:none;white-space:nowrap}
+.sh-tabs .chip.on{background:var(--primary);color:var(--primary-ink);border-color:transparent}
+.sh-item{margin-bottom:10px;padding:0}
+.sh-item[hidden]{display:none}
+.sh-item>summary{list-style:none;cursor:pointer;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sh-item>summary::-webkit-details-marker{display:none}
+.sh-item>summary::after{content:'▾';color:var(--muted);transition:transform .2s}
+.sh-item[open]>summary::after{transform:rotate(180deg)}
+.sh-item>summary small{display:block;margin-top:2px;font-size:.82rem}
+.sh-body{padding:0 16px 16px;border-top:1px solid var(--border)}
+.sh-body h4,.sh-grp{margin:16px 0 6px;font-size:.95rem;color:var(--primary)}
+.sh-grp{font-size:1rem;margin:18px 2px 8px}
+.sh-dua{background:var(--playing);border-radius:14px;padding:12px 14px;margin:12px 0}
+.sh-niat{border:1px dashed var(--primary)}
+.sh-dh{display:flex;flex-direction:column;gap:2px;margin-bottom:6px}
+.sh-note{font-size:.78rem;color:var(--muted)}
+.sh-ar{font-family:'Amiri Quran',serif;font-size:calc(var(--arab-size) * .72);line-height:2.1;margin:4px 0;text-align:right}
+.sh-la{margin:4px 0;font-style:italic;color:var(--accent);line-height:1.6}
+.sh-id{margin:4px 0;color:var(--text);line-height:1.6;font-size:.95rem}
+.sh-tip{background:var(--surface);border:1px solid var(--border);border-inline-start:4px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:.9rem;margin:12px 0}
+.sh-ol,.sh-ul{padding-inline-start:22px;margin:8px 0;line-height:1.7}
+.sh-big{counter-reset:s;list-style:none;padding:0;margin:0}
+.sh-big>li{counter-increment:s;position:relative;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px 14px 6px 54px;margin-bottom:10px;box-shadow:var(--shadow)}
+.sh-big>li::before{content:counter(s);position:absolute;left:14px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--primary);color:var(--primary-ink);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.sh-big>li>b{display:block;margin-bottom:2px}
+.sh-big>li>p{margin:2px 0 8px;color:var(--muted);font-size:.92rem}
+.sh-big .sh-dua{margin-left:-40px;margin-right:0}
+.sh-badge{display:inline-block;background:var(--playing);color:var(--primary);border-radius:999px;padding:1px 9px;font-size:.75rem;font-style:normal;margin-inline-start:6px}
+.sh-lines .sh-line{border-bottom:1px solid var(--border);padding:4px 0}
+.sh-lines .sh-ar{margin:0}
+.sh-chips{margin:8px 0}
+.sh-peta{background:var(--playing);padding:8px 12px;border-radius:10px}
+.sh-surat{margin-top:6px}
+.sh-surat .btn{padding:6px 10px;font-size:.85rem}
+.sh-jadwal .btn-row{margin-top:12px}
+.sh-next{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;border-radius:14px;padding:14px;text-align:center;margin:8px 0 12px}
+.sh-next small{display:block;opacity:.85}.sh-next b{display:block;font-size:1.8rem;margin:2px 0}.sh-next span{opacity:.92}
+.sh-times{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.sh-times li{display:flex;justify-content:space-between;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.sh-times li.on{border-color:var(--primary);background:var(--playing);font-weight:600}
+.sh-times li b{font-variant-numeric:tabular-nums}
+
+.sh-table{width:100%;border-collapse:collapse;font-size:.92rem;margin:8px 0}
+.sh-table th,.sh-table td{border:1px solid var(--border);padding:6px 8px;text-align:center}
+.sh-table th{background:var(--playing);color:var(--primary)}
+.sh-table td:first-child{text-align:start;font-weight:600}

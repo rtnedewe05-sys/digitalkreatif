@@ -1,0 +1,38 @@
+/* Makharijul Huruf (memakai .hd-hero, .card, .btn, .chip dari gaya utama) */
+.mk-svg{display:block;width:100%;height:auto;max-height:62vh;touch-action:manipulation}
+.mk-head{fill:none;stroke:var(--muted);stroke-width:2.5;stroke-linecap:round}
+.mk-nasal{fill:rgba(96,165,250,.14);stroke:rgba(96,165,250,.45);stroke-width:1.5}
+.mk-wall,.mk-floor{fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round}
+.mk-pal{fill:none;stroke:#d9876a;stroke-width:6;stroke-linecap:round}
+.mk-tg{fill:#ec8b9a;stroke:#c2566b;stroke-width:2;stroke-linejoin:round}
+.mk-tooth{fill:#fff;stroke:#94a3b8;stroke-width:1.5}
+.mk-lip{fill:#e0787f;stroke:#b84d57;stroke-width:1.5}
+.mk-vf{fill:none;stroke:#dc2626;stroke-width:3;stroke-linecap:round;opacity:.45;transition:opacity .3s}.mk-vf.on{opacity:1}
+.mk-air{opacity:0;stroke:#3b82f6;stroke-width:2.5;transition:opacity .4s}.mk-air.on{opacity:1}
+.mk-lab text{font:600 9px Inter,system-ui,sans-serif;fill:var(--muted);paint-order:stroke;stroke:var(--surface);stroke-width:3px;stroke-linejoin:round}
+.mk-dot{opacity:.55}.mk-dg{cursor:pointer}.mk-dg:hover .mk-dot{opacity:1}
+.mk-ptg{pointer-events:none;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.mk-ring{fill:none;stroke:var(--c,#f59e0b);stroke-width:2.5;transform-box:fill-box;transform-origin:center;animation:mkp 1.4s ease-out infinite}
+.mk-core{fill:var(--c,#f59e0b);stroke:#fff;stroke-width:1.5}
+.mk-side{fill:none;stroke:var(--c,#0d9488);stroke-width:3;stroke-dasharray:4 4;stroke-linecap:round}
+@keyframes mkp{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.7);opacity:0}}
+@media (prefers-reduced-motion:reduce){.mk-ring{animation:none}}
+.mk-ctl{display:flex;flex-wrap:nowrap;gap:8px;margin-top:8px}.mk-ctl .btn{flex:1 1 0;min-width:0;height:44px;padding:0;font-size:1.35rem;line-height:1;display:flex;align-items:center;justify-content:center}
+.mk-ih{display:flex;gap:10px;align-items:center;margin-bottom:6px}.mk-ih h2{margin:0 0 4px;font-size:1.1rem}
+.mk-no{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:#fff;font-weight:700}.mk-no.sm{width:26px;height:26px;font-size:.8rem}
+.mk-badge{display:inline-block;border:1px solid;border-radius:999px;padding:1px 10px;font-size:.78rem;font-weight:600}
+.mk-big{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:6px 0 10px}
+.mk-big b{font:400 2.6rem/1.3 'Amiri Quran',serif}
+.mk-ex{display:inline-block;margin:0 6px;font:400 1.5rem 'Amiri Quran',serif;color:var(--text)}
+.mk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:8px;margin:8px 0}
+.mk-let{font:400 1.7rem/1 'Amiri Quran',serif;padding:10px 0;border-radius:12px;border:2px solid var(--c);background:var(--bg);color:var(--text);cursor:pointer}
+.mk-let.active{background:var(--c);color:#fff}
+.mk-key{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--muted)}.mk-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:5px}
+.mk-list{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:6px}
+.mk-list button{display:flex;gap:10px;align-items:center;width:100%;text-align:left;padding:8px 10px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:inherit;font:inherit;cursor:pointer}
+.mk-list button.active{border-color:var(--primary);background:var(--playing)}
+.mk-list small{display:block;color:var(--muted)}
+.mk-qh{display:flex;justify-content:space-between;align-items:center}
+.mk-opts{display:grid;gap:8px}.mk-opts .btn{text-align:left}
+.mk-sp{display:inline-flex;flex-direction:column;align-items:center;padding:4px 12px;border-radius:14px;border:1px solid var(--border);background:var(--bg);color:var(--text);cursor:pointer}
+.mk-sp small{font-size:.8rem;line-height:1}.mk-sp:active{background:var(--playing)}

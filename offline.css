@@ -1,0 +1,61 @@
+/* Mode offline & halaman Unduhan offline */
+#offBar{display:flex; align-items:center; gap:10px; padding:7px calc(env(safe-area-inset-right) + 14px) 7px calc(env(safe-area-inset-left) + 14px);
+  background:color-mix(in srgb,var(--accent) 16%,var(--bg)); color:var(--text); border-bottom:1px solid var(--border); font-size:.86rem; line-height:1.3}
+#offBar[hidden]{display:none}
+#offBar .dot{flex:none; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 28%,transparent)}
+#offBar .t{flex:1; min-width:0}
+#offBar a{flex:none; font-weight:700; color:var(--primary); text-decoration:underline}
+
+
+
+.off-chips{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px}
+.off-chip{border:1px solid var(--border); background:var(--surface); color:var(--text); border-radius:999px; padding:6px 12px; min-height:36px; font:inherit; font-size:.85rem; font-weight:600; cursor:pointer}
+.off-chip small{color:var(--muted); font-weight:700; margin-left:2px}
+.off-chip[aria-pressed="true"]{background:var(--primary); border-color:var(--primary); color:var(--primary-ink)}
+.off-chip[aria-pressed="true"] small{color:inherit; opacity:.85}
+
+.off-tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:5px}
+.ot{display:inline-block; font-size:.7rem; line-height:1; font-weight:700; padding:3px 7px; border-radius:999px; border:1px solid transparent; white-space:nowrap}
+.ot.ok{background:color-mix(in srgb,var(--primary) 14%,var(--surface)); color:var(--primary); border-color:color-mix(in srgb,var(--primary) 30%,transparent)}
+.ot.part{background:color-mix(in srgb,var(--accent) 14%,var(--surface)); color:var(--accent); border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
+.ot.no{background:transparent; color:var(--muted); border-color:var(--border); font-weight:600}
+.ot.big{font-size:.78rem; padding:7px 10px}
+
+.surah-item.is-off a{opacity:.5; filter:grayscale(.6); cursor:not-allowed}
+.surah-item.is-off a:hover{border-color:var(--border)}
+.off-empty{text-align:center; padding:22px 16px}
+.off-empty p{margin:0 0 10px}
+.off-empty .btn{display:inline-block; text-decoration:none}
+
+/* halaman Unduhan offline */
+.off-sum{margin-bottom:12px}
+.off-head{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px}
+.off-head strong{font-size:1.1rem}
+.off-pill{font-size:.75rem; font-weight:700; padding:4px 10px; border-radius:999px}
+.off-pill.is-on{background:color-mix(in srgb,var(--primary) 16%,var(--surface)); color:var(--primary)}
+.off-pill.is-off{background:color-mix(in srgb,var(--accent) 20%,var(--surface)); color:var(--accent)}
+.off-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:10px}
+.off-stats div{background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:10px 6px; text-align:center}
+.off-stats b{display:block; font-size:1.3rem; color:var(--primary)}
+.off-stats b small{font-size:.7rem; color:var(--muted); font-weight:600}
+.off-stats span{font-size:.74rem; color:var(--muted)}
+.off-note{margin:6px 0 10px; padding:8px 10px; border-radius:10px; background:color-mix(in srgb,var(--accent) 12%,var(--surface)); font-size:.88rem}
+.off-sum .btn-row{margin:8px 0}
+.btn[disabled]{opacity:.5; cursor:not-allowed}
+.btn.sm{padding:7px 12px; font-size:.82rem; border-radius:10px}
+.btn.ghost{background:transparent}
+
+.off-list{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+@media(min-width:720px){.off-list{grid-template-columns:1fr 1fr}}
+.off-row{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:10px 12px}
+.off-main{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+.off-act{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px}
+.off-act .muted{flex:1; min-width:0}
+.off-prog{height:6px; background:var(--border); border-radius:999px; overflow:hidden; margin-top:10px}
+.off-prog i{display:block; height:100%; background:var(--primary); transition:width .25s}
+@media(prefers-reduced-motion:reduce){.off-prog i{transition:none}}
+
+/* Saat offline, beranda dipadatkan agar daftar surah yang sudah diunduh langsung terlihat */
+html.is-offline .hero{display:none}
+html.is-offline #searchHost .searchbox{margin-top:0}
+

@@ -1,0 +1,29 @@
+/* Video Tajwid */
+.v-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.v-s{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:inherit}
+.ar-mini{font-family:"Amiri Quran",serif;font-size:20px}
+.v-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.v-head select{margin-inline-start:auto;padding:6px 8px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+.v-stage{font-family:"Amiri Quran",serif;font-size:calc(var(--arab-size) + 2px);line-height:2.1;text-align:center;padding:18px 8px;margin:10px 0;border-radius:14px;background:var(--bg);min-height:120px}
+.v-w{opacity:.3;transition:opacity .25s,background .25s,transform .25s;border-radius:8px;padding:0 1px;cursor:default}
+.v-w[data-r]{cursor:pointer}.v-w.done{opacity:1}.v-w.now{opacity:1;background:var(--playing);transform:scale(1.12);display:inline-block;box-shadow:0 0 0 2px var(--primary)}
+.v-tl{position:relative;height:14px;border-radius:8px;background:var(--border);cursor:pointer;margin:4px 0 12px;overflow:visible}
+.v-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:8px;background:var(--primary);opacity:.55}
+.v-tick{position:absolute;top:-3px;width:4px;height:20px;border-radius:2px;background:currentColor}
+.v-card{border:1px dashed var(--border);border-radius:14px;padding:12px;margin-bottom:12px;min-height:96px;animation:vpop .3s}
+.v-cardrow{display:flex;gap:14px;align-items:center}.v-big{font-family:"Amiri Quran",serif;font-size:46px;line-height:1.3;min-width:64px;text-align:center}
+.v-beats,.v-hum{display:flex;gap:8px;align-items:center;margin-top:10px}.v-beats small,.v-hum small{margin-inline-start:6px;color:var(--muted)}
+.v-beats i{width:18px;height:18px;border-radius:50%;background:var(--border);animation:vbeat .5s forwards;animation-fill-mode:forwards;opacity:.9}
+.v-hum i{width:6px;height:18px;border-radius:3px;background:var(--tj-g,#16a34a);animation:vhum .7s ease-in-out infinite}.v-hum i:nth-child(2){animation-delay:.15s}.v-hum i:nth-child(3){animation-delay:.3s}
+.v-ball{width:20px;height:20px;border-radius:50%;background:var(--tj-q,#1d6fd1);margin-top:10px;animation:vbounce .6s ease-out infinite}
+.v-fadeout{margin-top:10px;color:var(--muted);animation:vfade 1.6s ease-in-out infinite}
+.v-legend{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:6px}.v-chip{display:inline-flex;align-items:center;gap:5px;font-size:12px;border:1px solid var(--border);border-radius:99px;padding:3px 9px}
+.v-chip i{width:10px;height:10px;border-radius:50%;background:currentColor;display:inline-block}
+@keyframes vbeat{from{background:var(--border);transform:scale(1)}to{background:var(--tj-n,#e07a1f);transform:scale(1.25)}}
+@keyframes vhum{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1.5)}}
+@keyframes vbounce{0%{transform:translateY(0)}45%{transform:translateY(-22px)}100%{transform:translateY(0)}}
+@keyframes vfade{0%,100%{opacity:1}60%{opacity:.15}}
+@keyframes vpop{from{transform:translateY(6px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.v-w,.v-card,.v-beats i,.v-hum i,.v-ball,.v-fadeout{animation:none!important;transition:none!important}}
+
+.v-qari{display:flex;align-items:center;gap:10px;margin:12px 0 4px;font-weight:600}.v-qari select{flex:1;min-width:0;padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+.v-reco{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between;font-size:.85rem;color:var(--muted,#667);margin:2px 0 6px;padding:8px 10px;border-radius:10px;background:var(--surface-2,rgba(14,120,110,.08))}.v-reco span{flex:1;min-width:180px}.v-reco .btn{padding:6px 12px;font-size:.85rem}

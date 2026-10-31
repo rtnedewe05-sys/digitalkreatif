@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Al-Quran: teks Arab berwarna tajwid, terjemahan Indonesia, tafsir, arti per kata, murottal, hadis, dan tuntunan ibadah. Bisa dipakai offline.">
+<meta name="theme-color" content="#0f766e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Al-Quran">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Al-Quran: Baca Online dengan Terjemahan, Tajwid, dan Murottal</title>
+<link rel="canonical" href="https://tajwidku.my.id/">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<meta property="og:site_name" content="Al-Quran">
+<meta property="og:locale" content="id_ID">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Al-Quran: Baca Online dengan Terjemahan, Tajwid, dan Murottal">
+<meta property="og:description" content="Al-Quran: teks Arab berwarna tajwid, terjemahan Indonesia, tafsir, arti per kata, murottal, hadis, dan tuntunan ibadah. Bisa dipakai offline.">
+<meta property="og:url" content="https://tajwidku.my.id/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Al-Quran", "url": "https://tajwidku.my.id/", "inLanguage": "id", "description": "Al-Quran: teks Arab berwarna tajwid, terjemahan Indonesia, tafsir, arti per kata, murottal, hadis, dan tuntunan ibadah. Bisa dipakai offline."}</script>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sholat.css">
+<link rel="stylesheet" href="sunnah.css">
+<link rel="stylesheet" href="haji.css">
+<link rel="stylesheet" href="hadith.css">
+<link rel="stylesheet" href="sirah.css">
+<link rel="stylesheet" href="nabi.css">
+<link rel="stylesheet" href="sahabat.css">
+<link rel="stylesheet" href="makharij.css">
+<link rel="stylesheet" href="tajwid-video.css">
+<link rel="stylesheet" href="perpustakaan.css">
+<link rel="stylesheet" href="sedekah.css">
+<link rel="stylesheet" href="offline.css">
+</head>
+<body>
+<header id="topbar">
+  <button class="icon-btn" id="btnBack" aria-label="Kembali" hidden><span data-icon="back"></span></button>
+  <a class="title" id="appTitle" href="#/"></a>
+  <div class="top-actions">
+    <a class="icon-btn top-heart" href="#/sedekah" aria-label="Sedekah" title="Sedekah"><span data-icon="heart"></span></a>
+    <button class="icon-btn" id="btnInstall" aria-label="Pasang aplikasi" title="Pasang aplikasi" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg></button>
+    <button class="icon-btn" id="btnLegend" aria-label="Arti warna tajwid" title="Arti warna tajwid"><span data-icon="bulb"></span></button>
+    <button class="icon-btn" id="btnSettings" aria-label="Pengaturan" title="Pengaturan"><span data-icon="tune"></span></button>
+    <button class="icon-btn" id="btnMenu" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span data-icon="menu"></span></button>
+  </div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<div id="tip" hidden role="status"></div>
+<div id="toast" hidden role="status" aria-live="polite"></div>
+
+<section id="player" hidden aria-label="Pemutar murottal">
+  <input id="pSeek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Posisi audio">
+  <div class="p-row">
+    <div class="p-info"><strong id="pTitle"></strong><small id="pSub"></small></div>
+    <div class="p-ctrl">
+      <button class="icon-btn" id="pPrev" aria-label="Ayat sebelumnya"><span data-icon="prev"></span></button>
+      <button class="icon-btn main" id="pToggle" aria-label="Putar atau jeda"><span data-icon="play"></span></button>
+      <button class="icon-btn" id="pNext" aria-label="Ayat berikutnya"><span data-icon="next"></span></button>
+    </div>
+    <div class="p-extra">
+      <button class="btn" id="pSpeed" aria-label="Kecepatan">1x</button>
+      <button class="btn" id="pRepeat" aria-label="Ulangi">1×</button>
+      <button class="icon-btn" id="pClose" aria-label="Tutup pemutar"><span data-icon="close"></span></button>
+    </div>
+  </div>
+</section>
+
+<div id="drawerScrim" hidden></div>
+<aside id="drawer" aria-hidden="true" aria-label="Menu" inert>
+  <div class="dr-head"><b>Menu</b><button class="icon-btn" id="drawerClose" aria-label="Tutup menu"><span data-icon="close"></span></button></div>
+  <nav id="drawerNav"></nav>
+</aside>
+
+<dialog id="settings" aria-labelledby="setTitle">
+  <div class="dlg-head"><h2 id="setTitle">Pengaturan</h2><button class="icon-btn" aria-label="Tutup" onclick="this.closest('dialog').close()"><span data-icon="close"></span></button></div>
+  <label class="field">Tema
+    <select id="setTheme"><option value="auto">Ikuti perangkat</option><option value="light">Terang</option><option value="dark">Gelap</option><option value="sepia">Sepia</option></select>
+  </label>
+  <label class="field">Ukuran huruf Arab: <span id="arabSizeVal">36px</span>
+    <input id="setArab" type="range" min="24" max="64" step="2" value="36">
+  </label>
+  <label class="field">Mushaf (gaya tulisan Arab)
+    <select id="setMushaf"><option value="bawaan">Bawaan aplikasi (Amiri Quran)</option><option value="intl">Internasional (Mushaf Madinah)</option><option value="kemenag">Kemenag (Mushaf Standar Indonesia)</option></select>
+  </label>
+  <p class="muted small" id="mushafNote" role="status"></p>
+  <label class="check"><input id="setTajwid" type="checkbox"><span>Warna tajwid</span></label>
+  <label class="check"><input id="setLatin" type="checkbox"><span>Tampilkan teks latin</span></label>
+  <label class="check"><input id="setTrans" type="checkbox"><span>Tampilkan terjemahan</span></label>
+  <label class="check"><input id="setWbw" type="checkbox"><span>Tampilkan arti per kata otomatis di semua ayat</span></label>
+  <label class="check"><input id="setHafalan" type="checkbox"><span>Mode hafalan (sembunyikan teks Arab, ketuk untuk menampilkan)</span></label>
+  <hr>
+  <label class="field">Qari
+    <select id="setQari"></select>
+  </label>
+  <label class="field">Kecepatan audio
+    <select id="setSpeed"><option value="0.75">0.75x</option><option value="1">1x</option><option value="1.25">1.25x</option><option value="1.5">1.5x</option></select>
+  </label>
+  <label class="field">Ulangi tiap ayat
+    <select id="setRepeat"><option value="1">1×</option><option value="2">2×</option><option value="3">3×</option><option value="5">5×</option><option value="10">10×</option></select>
+  </label>
+  <label class="check"><input id="setAutoNext" type="checkbox"><span>Lanjut otomatis ke ayat berikutnya</span></label>
+  <hr>
+  <div id="offBox">
+    <p class="muted small" id="offStatus" role="status"></p>
+    <div class="row-actions">
+      <button class="btn" id="btnOffCore" type="button">Perbarui data offline</button>
+      <button class="btn" id="btnOffAll" type="button">Unduh semua tafsir</button>
+      <a class="btn" href="#/offline" onclick="this.closest('dialog').close()">Kelola unduhan offline</a>
+    </div>
+  </div>
+  <p class="muted small" id="iosHint" hidden>Untuk memasang di iPhone/iPad: ketuk tombol Bagikan, lalu “Tambah ke Layar Utama”.</p>
+</dialog>
+
+<dialog id="legend" aria-labelledby="legTitle">
+  <div class="dlg-head"><h2 id="legTitle">Arti warna tajwid</h2><button class="icon-btn" aria-label="Tutup" onclick="this.closest('dialog').close()"><span data-icon="close"></span></button></div>
+  <ul class="legend" id="legendList"></ul>
+</dialog>
+
+<dialog id="wordSheet" class="sheet" aria-labelledby="wordRef">
+  <div class="dlg-head"><h2 id="wordRef"></h2><button class="icon-btn" aria-label="Tutup" data-close><span data-icon="close"></span></button></div>
+  <div id="wordBody"></div>
+</dialog>
+
+<p style="text-align:center;font-size:13px;opacity:.7"><a href="/surah/">Daftar 114 surat Al-Qur'an</a></p>
+<noscript><p style="padding:20px;text-align:center">Aplikasi ini membutuhkan JavaScript. Tanpa JavaScript, baca teks Arab, latin, dan terjemahan di <a href="/surah/">daftar 114 surat</a>.</p></noscript>
+
+<script src="kata.js"></script>
+<script src="tajwid-engine.js"></script>
+<script src="analisis.js"></script>
+<script src="kiblat.js"></script>
+<script src="makharij.js"></script>
+<script src="hafalan.js"></script>
+<script src="sholat.js"></script>
+<script src="tajwid-video.js"></script>
+<script src="sedekah.js"></script>
+<script src="hadith.js"></script>
+<script src="sunnah.js"></script>
+<script src="sirah.js"></script>
+<script src="perpustakaan.js"></script>
+<script src="sejarah.js"></script>
+<script src="nabi-data.js"></script>
+<script src="nabi.js"></script>
+<script src="sahabat.js"></script>
+<script src="haji.js"></script>
+<script src="alam-wilayah.js"></script>
+<script src="alam.js"></script>
+<script src="offline.js"></script>
+<script src="app.js"></script>
+<script src="96-waqf.js"></script>
+</body>
+</html>

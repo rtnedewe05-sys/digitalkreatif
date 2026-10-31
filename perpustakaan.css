@@ -1,0 +1,29 @@
+.pk-ar{font-family:"Amiri Quran",serif;font-size:1.15rem;margin:2px 0 4px;line-height:1.8}
+.sr-ev small.muted{display:block}
+.pk-frame{display:block;width:100%;height:70vh;min-height:420px;border:1px solid var(--border);border-radius:10px;margin:8px 0;background:#000}
+.pk-panel{margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}.pk-v{margin:6px 0}
+/* Menu samping Internet Archive disembunyikan: iframe dibuat lebih lebar lalu digeser ke kiri; tombol menampilkannya kembali */
+.pk-wrap{overflow:hidden;border:1px solid var(--border);border-radius:10px;margin:8px 0;background:#000}
+.pk-wrap .pk-frame{border:0;border-radius:0;margin:0 0 0 -330px;width:calc(100% + 330px);max-width:none;transition:margin .2s,width .2s}
+.pk-wrap.open .pk-frame{margin-left:0;width:100%}
+.pk-box{margin:8px 0;min-height:120px}
+.pk-bar{display:flex;gap:6px;align-items:center;margin:6px 0;flex-wrap:wrap}.pk-bar input{flex:1;min-width:120px;padding:7px 10px;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);font:inherit}
+.pk-nav{display:flex;gap:10px;align-items:center;justify-content:center;margin:8px 0}.pk-nav input{width:64px;padding:5px 6px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font:inherit;text-align:center}
+.pk-text{line-height:1.85;overflow-wrap:anywhere}.pk-text p{margin:0 0 .9em}.pk-text mark{background:#f6d75566;color:inherit;border-radius:3px}
+.pk-pdf{background:#888;border-radius:8px;overflow:hidden}.pk-pdf canvas{display:block}
+
+/* Pembaca seragam: kepala, tab, panggung 72vh, kaki; semua dapat layar penuh */
+.pk-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.pk-head b{overflow-wrap:anywhere}
+.pk-stage{height:72vh;min-height:420px;border:1px solid var(--border);border-radius:10px;background:var(--surface);overflow:auto;position:relative;margin:8px 0}
+.pk-stage.pdf,.pk-stage.page,.pk-stage.gv{background:#111}
+.pk-stage .pk-frame{height:100%;min-height:0;border:0;border-radius:0;margin:0;background:#000}
+.pk-stage.page{overflow:hidden}
+.pk-stage.page .pk-frame{margin-left:-330px;width:calc(100% + 330px);max-width:none;transition:margin .2s,width .2s}
+.pk-stage.page.open .pk-frame{margin-left:0;width:100%}
+.pk-stage .pk-box{max-width:900px;margin:0 auto;padding:0 12px 12px}
+.pk-stage.pdf .pk-box{padding:0 0 12px;color:#ddd}.pk-stage.pdf .pk-nav{color:#ddd}
+.pk-stage .pk-bar{position:sticky;top:0;z-index:2;background:var(--surface);padding:8px 0;margin:0}
+#pkreader.pk-full{position:fixed;inset:0;z-index:2000;margin:0;border-radius:0;border:0;display:flex;flex-direction:column;padding:10px 12px;overflow:hidden;background:var(--bg,var(--surface));box-sizing:border-box}
+#pkreader.pk-full .pk-stage{flex:1;height:auto;min-height:0;margin:6px 0}
+#pkreader.pk-full .pk-foot{display:none}
+body.pk-lock{overflow:hidden}

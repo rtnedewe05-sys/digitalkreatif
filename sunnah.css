@@ -1,0 +1,15 @@
+/* As-Sunnah (memakai gaya .hd-* dari hadith.css) */
+.sn-sum{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.sn-ring{--p:0;width:64px;height:64px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;background:conic-gradient(var(--primary) calc(var(--p)*1%),var(--border) 0)}
+.sn-ring span{width:50px;height:50px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.sn-spec{border-color:var(--primary);margin-bottom:10px;font-weight:600}
+.sn-item{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px;margin-bottom:8px}
+.sn-item.done{opacity:.75;border-color:var(--primary)}
+.sn-item.done b{text-decoration:line-through}
+.sn-chk{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:2px solid var(--primary);background:transparent;color:var(--primary-ink);font-weight:700;cursor:pointer}
+.sn-item.done .sn-chk{background:var(--primary)}
+.sn-body p{margin:3px 0 6px}.sn-dl{font-size:.85rem;color:var(--primary);text-decoration:none}
+.sn-lib{margin-bottom:10px}.sn-lib p{margin:4px 0 8px}
+.sn-grid{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;margin:10px 0}
+.sn-cell{aspect-ratio:1;border-radius:4px;background:var(--border)}
+.sn-cell.l1{background:#99d8cf}.sn-cell.l2{background:#4fb5a8}.sn-cell.l3{background:#1f8f83}.sn-cell.l4{background:var(--primary)}

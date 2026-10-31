@@ -1,0 +1,39 @@
+/*
+  Menggeser tombol instal ke atas supaya tidak tertutup badge "Powered by Netlify".
+
+  CARA PAKAI:
+  1. Simpan file ini di folder situsmu (satu folder dengan index.html).
+  2. Tambahkan di <head> semua halaman, SETELAH css utama:
+       <link rel="stylesheet" href="geser-tombol-instal.css">
+  3. Ganti selector di bawah dengan id/class tombol instalmu yang sebenarnya.
+     (Klik kanan tombol di browser > Inspect untuk melihat id/class-nya.)
+*/
+
+:root {
+  /* Tinggi badge Netlify + jarak aman. Naikkan angkanya kalau masih menutupi. */
+  --jarak-atas-badge: 80px;
+}
+
+/* Selector umum yang sering dipakai untuk tombol instal PWA.
+   Hapus yang tidak dipakai, atau tambahkan selector milikmu. */
+#installBtn,
+#install-btn,
+#btn-install,
+#install-button,
+#pwa-install,
+#pwaInstall,
+.install-btn,
+.install-button,
+.pwa-install,
+.pwa-install-btn {
+  position: fixed !important;
+  bottom: calc(var(--jarak-atas-badge) + env(safe-area-inset-bottom)) !important;
+  right: 16px !important;
+  z-index: 50 !important;
+}
+
+/* ALTERNATIF: kalau mau pindah ke kiri bawah supaya tidak pernah bertabrakan
+   dengan badge, hapus "right: 16px" di atas dan pakai ini:
+
+   #installBtn { left: 16px !important; right: auto !important; bottom: 16px !important; }
+*/

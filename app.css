@@ -1,0 +1,115 @@
+:root{--bg:#f3f5f2;--card:#fff;--ink:#1b2a22;--mut:#5d6b63;--acc:#1f6b4a;--line:#dbe1dc;--chip:#e3efe8;--mk:#ffe600;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111a15;--card:#1a2620;--ink:#e6eee9;--mut:#93a39a;--acc:#5fc496;--line:#2b3a32;--chip:#22352b;--mk:#f5d90a}}
+:root[data-theme="dark"]{--bg:#111a15;--card:#1a2620;--ink:#e6eee9;--mut:#93a39a;--acc:#5fc496;--line:#2b3a32;--chip:#22352b;--mk:#f5d90a}
+html{scroll-padding-top:120px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:12px 14px 10px;border-bottom:1px solid var(--line);z-index:2}
+.row{display:flex;gap:8px;align-items:center}h1{font-size:18px;margin:0 0 8px;flex:1}
+button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 12px;cursor:pointer}
+input{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+input:focus,summary:focus-visible,button:focus-visible{outline:2px solid var(--acc)}
+main{padding:12px 14px 60px;max-width:760px;margin:auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+summary{list-style:none;cursor:pointer;padding:14px;display:flex;gap:12px;align-items:center}summary::-webkit-details-marker{display:none}
+.no{flex:none;width:44px;height:44px;border-radius:10px;background:var(--acc);color:var(--card);display:grid;place-items:center;font-weight:700;font-size:17px}
+.nm{flex:1;font-weight:600}.nm small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+details[open] summary{border-bottom:1px solid var(--line)}
+.s{padding:11px 14px;border-top:1px solid var(--line);display:flex;gap:10px;cursor:pointer}.s:first-of-type{border-top:0}
+.s:hover{background:var(--chip)}.k{flex:none;min-width:40px;color:var(--acc);font-weight:700}.t{flex:1;font-size:14.5px}
+.pg{display:block;color:var(--mut);font-size:12.5px}
+.k.kl{min-width:62px;font-size:14px;line-height:1.55}
+.r{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;cursor:pointer;font-size:14.5px}
+.r b{color:var(--acc)}mark{background:var(--mk);color:#111;border-radius:3px;padding:0 1px}mark b{font-weight:800}
+.pgh{margin:22px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--line);color:var(--mut);font-size:12.5px}
+.txt{font-size:16px;line-height:1.6;overflow-wrap:anywhere}.b{margin:0 0 .7em}.h{font-weight:700;margin:1.1em 0 .5em}.tb{overflow-x:auto;white-space:pre;font:.8em/1.4 ui-monospace,Consolas,monospace;background:var(--chip);padding:8px 10px;border-radius:8px;margin:.6em 0}
+.empty{text-align:center;color:var(--mut);padding:30px 10px}
+#dr{position:fixed;inset:0;z-index:10}.ov{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+#nv{position:absolute;top:0;left:0;bottom:0;width:min(340px,86vw);background:var(--bg);overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 14px) 14px 30px;border-right:1px solid var(--line)}
+#nv h2{font-size:15px;margin:18px 0 8px;color:var(--mut);font-weight:600}#nv h2:first-child{margin-top:0}
+.mi{display:block;width:100%;text-align:left;margin-bottom:8px;padding:12px 14px}.seg{display:flex;gap:6px;margin-bottom:8px}.seg button{flex:1;padding:10px 6px}
+.seg button[aria-pressed="true"]{background:var(--acc);color:var(--card);border-color:var(--acc)}
+#nv details summary{padding:11px 12px}#nv .no{width:34px;height:34px;font-size:14px;border-radius:8px}#nv .nm{font-size:14.5px}
+#nv .s{padding:10px 12px}
+h1{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#st{font-size:20px;padding:6px 12px}a.x{color:var(--acc);font-weight:600;text-decoration:underline}
+
+.fg{margin:.9em 0 1.1em;text-align:center}.fg img{max-width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:8px;cursor:zoom-in}
+.fg figcaption{font-size:12.5px;color:var(--mut);margin-top:4px}
+#lb{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.92);overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 56px) 8px calc(env(safe-area-inset-bottom,0px) + 16px)}
+#lb[hidden]{display:none}#lbi{display:block;margin:0 auto;min-width:100%;width:auto;max-width:none;background:#fff}
+#lbx{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;z-index:21}
+
+/* ---- pembaruan: progres baca, navigasi seksi, fokus, gerak ---- */
+#pb{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+.sn{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:28px 0 10px}
+.sn button{display:flex;flex-direction:column;gap:2px;text-align:left;padding:12px 14px;min-width:0}
+.sn button:last-child:not(:first-child){text-align:right}
+.sn small{color:var(--acc);font-weight:700;font-size:12px}
+.sn span{font-size:13.5px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.up{display:block;margin:0 auto 20px;color:var(--mut);font-size:13px;border-style:dashed}
+.r:focus-visible,.s:focus-visible,[data-p]:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+#nv:focus{outline:none}
+@media(prefers-reduced-motion:reduce){body{animation:none!important}html{scroll-behavior:auto!important}}
+
+/* ---- menu hamburger: dua lapisan (Spesifikasi Umum 2025 + Teknik), masing-masing bisa dilipat ---- */
+.ly{border:1px solid var(--line);border-radius:16px;background:var(--card);margin-bottom:12px;overflow:hidden}
+.lyh{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:12px 14px;border:0;border-radius:0;background:transparent;box-shadow:none}
+.lyh:hover{background:var(--chip);box-shadow:none}
+.lyi{flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:19px;background:var(--chip);border:1px solid var(--line)}
+.lyt{flex:1;min-width:0;font-weight:700;font-size:15px;line-height:1.25}.lyt small{display:block;margin-top:2px;font-weight:400;font-size:12px;color:var(--mut)}
+.lyc{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:var(--mut);transition:transform .25s,color .2s,background .2s}
+.lyc::before{content:"";width:8px;height:8px;border:solid currentColor;border-width:0 2.5px 2.5px 0;transform:translateY(-2px) rotate(45deg)}
+.ly[data-open="1"] .lyc{transform:rotate(180deg);color:var(--acc);background:var(--chip)}
+.ly[data-open="1"] .lyh{border-bottom:1px solid var(--line)}
+.lyb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .26s ease}
+.ly[data-open="1"] .lyb{grid-template-rows:1fr}
+.lyx{min-height:0;overflow:hidden;padding:0 12px}.ly[data-open="1"] .lyx{padding:12px}
+.ly .lyx>h2:first-child{margin-top:0}
+@media(prefers-reduced-motion:reduce){.lyb,.lyc{transition:none}}
+
+/* kartu alat Teknik: sama dengan kartu divisi */
+.tc{display:flex;gap:12px;align-items:center;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;cursor:pointer;transition:border-color .2s,background .2s}
+.tc::after{content:"\203A";font-size:26px;line-height:1;color:var(--mut);transition:transform .2s,color .2s}
+.tc:hover,.tc.on{border-color:var(--acc);background:var(--chip)}.tc:hover::after{transform:translateX(3px);color:var(--acc)}.tc.on::after{color:var(--acc)}
+.tc:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.tc .nm small{font-size:12.5px}
+.tkn{margin:6px 2px 2px;line-height:1.4}
+main .ly{border-radius:20px;margin-bottom:16px;box-shadow:var(--sh)}
+main .lyh{padding:16px 18px}main .lyi{width:48px;height:48px;font-size:22px;border-radius:14px}main .lyt{font-size:17px}main .lyt small{font-size:12.5px}
+main .ly[data-open="1"] .lyx{padding:14px 14px 4px}
+main .tc{padding:16px 18px;border-radius:18px;margin-bottom:12px;box-shadow:var(--sh)}
+#nv .tc{padding:10px 12px;margin-bottom:8px}#nv .tc::after{font-size:22px}
+/* halaman penuh Teknik (di dalam <main>) */
+html body #tk.tkpg{position:static!important;display:flex!important;flex-direction:column;width:auto!important;max-width:none!important;height:auto!important;max-height:none!important;margin:0!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;z-index:auto!important;border-radius:18px!important;border-width:1px!important;box-shadow:var(--sh)!important;animation:none!important;overflow:visible!important}
+#tk.tkpg>header{display:none!important}
+#tk.tkpg nav{padding-top:14px!important}
+#tk.tkpg #tkb{overflow:visible!important;padding:6px 18px 28px!important}
+#tk.tkpg .tkf{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))!important}
+#m input,#m select,#m textarea{-webkit-user-select:text!important;user-select:text!important}
+
+/* ---- hamburger rapi: bilah atas, daftar isi ringkas, footer tampilan ---- */
+#nv{padding:0 14px!important}
+.nvt{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:6px;margin:0 -14px 12px;padding:calc(env(safe-area-inset-top,0px) + 12px) 12px 10px 16px;background:var(--pkbg,var(--bg));border-bottom:1px solid var(--line)}
+.nvb{flex:1;min-width:0;display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px}.nvb i{font-style:normal}
+.nvt button{width:38px;height:38px;padding:0;display:grid;place-items:center;border-radius:50%;font-size:18px;line-height:1}
+.nvf{position:sticky;bottom:0;z-index:3;display:grid;gap:8px;margin:12px -14px 0;padding:10px 14px calc(env(safe-area-inset-bottom,0px) + 10px);background:var(--pkbg,var(--bg));border-top:1px solid var(--line)}
+.nvf .seg{margin:0}.nvf .seg button{padding:8px 4px;font-size:13px}
+#nv .ly[data-open="1"] .lyx{padding:4px 8px 8px}
+html body #nv details.dv{background:transparent;border:0;border-radius:0;box-shadow:none;margin:0;-webkit-backdrop-filter:none;backdrop-filter:none;transform:none;border-bottom:1px solid var(--line)}
+html body #nv details.dv:last-child{border-bottom:0}
+#nv details.dv::after{display:none}
+#nv details.dv summary{padding:9px 4px;gap:10px}
+#nv details.dv .no{width:28px;height:28px;font-size:12px;border-radius:8px;box-shadow:none}
+#nv details.dv .nm{font-size:13.5px;font-weight:600}
+#nv details.dv summary::after{font-size:20px}
+#nv details.dv[open] summary{border-bottom:0}
+#nv details.dv .s{padding:8px 8px 8px 42px;border-top:0}#nv details.dv .s:hover{padding-left:46px}
+#nv .s.on{background:var(--chip)}#nv .s.on .k,#nv .s.on .t{color:var(--acc);font-weight:600}
+#nv .tc{padding:8px 10px;margin-bottom:6px;border-radius:12px;box-shadow:none}#nv .tc small{display:none}
+#nv .tc .no{width:30px;height:30px;font-size:15px;border-radius:9px;box-shadow:none}
+#nv .tc .nm{font-size:14px}
+
+/* Mode terpasang (PWA): tanpa kolom alamat, cegah tarik-segarkan & pantulan layar */
+@media (display-mode: standalone), (display-mode: minimal-ui){
+  html,body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent}
+  body{-webkit-touch-callout:none}
+}

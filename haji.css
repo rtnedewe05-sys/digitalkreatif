@@ -1,0 +1,37 @@
+/* Haji & Umrah (memakai gaya .hd-* dan .sr-* dari hadith.css/sirah.css) */
+.hj-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.hj-fig{margin:0;flex:1 1 150px;max-width:210px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:10px 8px}
+.hj-svg{display:block;margin:0 auto 6px;width:130px!important;height:225px!important;max-width:100%}
+.hj-fig figcaption b{display:block;font-size:.9rem;color:var(--primary);margin-bottom:2px}
+.hj-fig figcaption span{display:block;font-size:.8rem;line-height:1.45;color:var(--muted)}
+.hj-nono{flex:1 1 200px;align-self:center;text-align:left;font-size:.88rem}
+.hj-nono ul,.hj-tips{margin:4px 0 10px;padding-inline-start:20px;line-height:1.6}
+.hj-tips{color:var(--muted)}
+.hj-lg{display:flex;gap:12px;align-items:flex-start;margin-bottom:8px}
+.hj-lg p{margin:2px 0 6px}.hj-ic{font-size:1.5rem;line-height:1}
+.hj-rk h3{margin:0 0 4px;color:var(--primary)}.hj-rk ol{margin:0;padding-inline-start:20px;line-height:1.7}
+.hj-doa h3{margin:0 0 6px;font-size:.95rem;color:var(--primary)}
+.hj-lat{margin:4px 0;font-style:italic;color:var(--muted);line-height:1.55}
+.hj-ck{display:flex;gap:8px;align-items:center;padding:4px 0}
+.hj-cnt{text-align:center}
+.hj-cnt .chip{font:inherit;cursor:pointer}.hj-cnt .chip.active{background:var(--primary);color:var(--primary-ink);border-color:transparent}
+.hj-big{display:flex;flex-direction:column;align-items:center;justify-content:center;width:210px;height:210px;margin:10px auto;border-radius:50%;border:0;background:var(--primary);color:var(--primary-ink);font:inherit;cursor:pointer;box-shadow:var(--shadow);-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.hj-big:active{transform:scale(.96)}.hj-big span{font-size:4.5rem;font-weight:700;line-height:1}.hj-big small{opacity:.9}.hj-big.fin{background:#15803d}
+.hj-msg{margin:10px 0}
+.hj-map{display:block;width:100%;height:auto;max-width:420px;margin:6px auto;color:var(--text)}
+.hj-mq{margin-bottom:8px}.hj-mq p{margin:4px 0;line-height:1.55}
+.hj-cal{list-style:none;margin:6px 0;padding:0}.hj-cal li{padding:8px 0;border-bottom:1px solid var(--border)}.hj-cal li:last-child{border:0}
+/* pengaman agar tidak terpotong di layar sempit / huruf besar */
+#view{overflow-x:clip}
+#view>*{min-width:0;max-width:100%;box-sizing:border-box}
+.sr-ev{min-width:0;width:calc(100% - 30px);max-width:calc(100% - 30px);box-sizing:border-box;overflow-wrap:anywhere;word-break:break-word}
+.sr-ev .hd-acts{flex-wrap:wrap}.sr-ev .btn{white-space:normal}
+.hj-doa,.hj-lg,.hj-mq,.card{overflow-wrap:anywhere}
+.hj-doa .sd-ar{overflow-wrap:break-word;font-size:clamp(1.2rem,5.5vw,1.55rem)}
+.hj-lat{word-break:break-word}
+.hj-big{max-width:100%}
+.hj-fig{flex:1 1 130px;min-width:0}
+@media (max-width:360px){.hj-svg{width:110px!important;height:190px!important}.hj-big{width:180px;height:180px}}
+/* semua tab terlihat: turun ke baris berikutnya, tidak perlu digeser */
+.hj-tabs{flex-wrap:wrap;overflow:visible;gap:6px 8px}
+.hj-tabs .chip{padding:7px 12px}

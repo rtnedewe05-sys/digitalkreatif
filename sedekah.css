@@ -1,0 +1,16 @@
+.sd-hero{text-align:center;background:linear-gradient(135deg,var(--primary),color-mix(in srgb,var(--primary) 60%,#000));color:var(--primary-ink);border:0}
+.sd-hero h2{margin:6px 0;font-size:1.25rem}.sd-bis{font-family:'Amiri Quran','Amiri',serif;font-size:1.9rem;margin:0;line-height:1.8}.sd-lead{margin:0;opacity:.92;font-size:.95rem}
+.sd-qris{text-align:center;margin-top:14px}.sd-qris h2{margin:0 0 4px}
+.sd-img{display:block;width:100%;max-width:340px;height:auto;margin:12px auto;border-radius:16px;box-shadow:var(--shadow);background:#fff}
+.sd-nm{margin:4px 0 12px}.sd-how{text-align:left;max-width:420px;margin:14px auto 0;padding-inline-start:20px;color:var(--muted)}
+.sd-h{margin:22px 4px 8px;font-size:1.05rem}
+.sd-q{margin-bottom:12px}.sd-q h3{margin:0 0 6px;font-size:.95rem;color:var(--primary)}
+.sd-ar{font-family:'Amiri Quran','Amiri',serif;font-size:1.55rem;line-height:2.1;margin:6px 0;text-align:right}
+.sd-id{margin:6px 0 10px;line-height:1.6}.sd-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.sd-ref{font-size:.8rem;color:var(--muted);font-weight:600}.sd-foot .btn{padding:6px 12px;font-size:.85rem}
+.sd-note{margin:6px 4px 12px}.sd-dua{text-align:center}
+.icon-btn[href="#/sedekah"] svg{fill:#ff5c8a;color:#ff5c8a;filter:drop-shadow(0 0 4px rgba(255,92,138,.55));transform-origin:center;animation:sdBeat 2.6s ease-in-out infinite}
+.icon-btn[href="#/sedekah"] svg path{fill:#ff5c8a}
+@keyframes sdBeat{0%,60%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}42%{transform:scale(1.12)}}
+@media (prefers-reduced-motion:reduce){.icon-btn[href="#/sedekah"] svg{animation:none}}
+.sd-why{margin-top:14px}.sd-why h2{margin:0 0 8px;font-size:1.1rem}.sd-why p{line-height:1.7;margin:0 0 10px}.sd-why p:last-child{margin:0}

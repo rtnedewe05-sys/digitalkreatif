@@ -1,0 +1,8 @@
+/* Sahabat Nabi ﷺ (memakai gaya .sr-* dan .hd-*) */
+.sh-name{font-weight:600;color:var(--primary);text-decoration:none}.sh-name:hover{text-decoration:underline}
+.sh-ev p{margin:6px 0 8px}.sh-pf small{font-weight:400;font-size:.8em;color:var(--muted,inherit)}
+.sh-foc{border-color:var(--primary);box-shadow:0 0 0 2px var(--playing)}
+.sh-life{position:relative;height:10px;border-radius:99px;background:var(--border);margin:8px 0 2px;overflow:hidden}
+.sh-life i{position:absolute;top:0;bottom:0;border-radius:99px;background:var(--primary)}
+.sh-p{position:absolute;top:0;bottom:0;width:2px;background:#d4a017}
+.sh-axis{display:flex;justify-content:space-between;font-size:.68rem;opacity:.7;margin-bottom:6px}
